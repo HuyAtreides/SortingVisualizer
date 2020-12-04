@@ -1,0 +1,142 @@
+svg {
+  border: 1px solid rgb(175, 216, 248);
+  display: block;
+  margin: 20px auto;
+  g {
+    rect {
+      fill: rgb(173, 216, 230);
+    }
+    text {
+      text-anchor: middle;
+      fill: black;
+      font-size: 20px;
+    }
+    rect {
+      @keyframes compare {
+        0% {
+          fill: rgb(173, 216, 230);
+          opacity: 0.5;
+        }
+        100% {
+          fill: red;
+          opacity: 1;
+        }
+      }
+      @keyframes sorted {
+        0% {
+          fill: red;
+        }
+        100% {
+          fill: rgb(33, 136, 56);
+        }
+      }
+      @keyframes mark-as-sorted {
+        0% {
+          fill: rgb(173, 216, 230);
+        }
+        100% {
+          fill: rgb(33, 136, 56);
+        }
+      }
+      @keyframes finished {
+        0% {
+          fill: rgb(33, 136, 56);
+        }
+        100% {
+          fill: rgb(173, 216, 230);
+        }
+      }
+      @keyframes pivot {
+        0% {
+          opacity: 0.5;
+          fill: rgb(173, 216, 230);
+        }
+        100% {
+          fill: rgb(255, 254, 106);
+          opacity: 1;
+        }
+      }
+      @keyframes sub-array {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0.5;
+        }
+      }
+      @keyframes smaller-pivot {
+        0% {
+          fill: rgb(173, 216, 230);
+        }
+        100% {
+          fill: rgb(33, 136, 56);
+        }
+      }
+      @keyframes bigger-pivot {
+        0% {
+          fill: rgb(173, 216, 230);
+        }
+        100% {
+          fill: rgb(33, 136, 56);
+        }
+      }
+      @keyframes green-to-red {
+        0% {
+          fill: rgb(33, 136, 56);
+        }
+        100% {
+          fill: red;
+        }
+      }
+      @keyframes color-pivot {
+        0% {
+          fill: rgb(255, 254, 106);
+        }
+        100% {
+          fill: rgb(33, 136, 56);
+        }
+      }
+      @keyframes heapify {
+        0% {
+          fill: rgb(173, 216, 230);
+        }
+        100% {
+          fill: rgba(178, 67, 255, 0.75);
+        }
+      }
+      @keyframes heap-compare {
+        0% {
+          fill: rgba(178, 67, 255, 0.75);
+        }
+        100% {
+          fill: red;
+        }
+      }
+      @keyframes heap-sorted {
+        0% {
+          fill: rgba(178, 67, 255, 0.75);
+        }
+        100% {
+          fill: rgb(33, 136, 56);
+        }
+      }
+      @keyframes heap-finished {
+        0% {
+          fill: rgb(33, 136, 56);
+        }
+        100% {
+          fill: rgba(178, 67, 255, 0.75);
+        }
+      }
+
+      @keyframes heap-to-normal {
+        0% {
+          fill: rgba(178, 67, 255, 0.75);
+        }
+        100% {
+          fill: rgb(173, 216, 230);
+        }
+      }
+    }
+  }
+}

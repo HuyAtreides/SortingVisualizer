@@ -1,0 +1,24 @@
+.legend {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: auto;
+  @media screen and (max-width: 768px) {
+    width: 675px;
+    margin: auto 350px auto 350px;
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .color {
+      width: 20px;
+      height: 20px;
+    }
+    span {
+      font-size: 17px;
+      color: #34495e;
+      padding-left: 5px;
+    }
+  }
+}
