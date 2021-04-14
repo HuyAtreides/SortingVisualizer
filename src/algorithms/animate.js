@@ -1,11 +1,15 @@
 const moveY = ([xA, yA], [xB, yB], barA) => {
   let step = 0;
-  const move = () => {
+  let time;
+
+  const move = (timestamp) => {
+    if (time === undefined) time = timestamp;
+    const timeElapsed = timestamp - time;
+    step = ((yB - yA) / 250) * timeElapsed;
     if (Math.abs(step) < Math.abs(yB - yA)) {
-      step += (yB - yA) / (0.2 * 60);
       barA.setAttribute("transform", `translate(${xA}, ${yA + step})`);
       window.requestAnimationFrame(move);
-    } else if (Math.abs(step) > Math.abs(yB - yA)) {
+    } else if (Math.abs(step) >= Math.abs(yB - yA)) {
       barA.setAttribute("transform", `translate(${xA}, ${yB})`);
     }
   };
@@ -14,13 +18,17 @@ const moveY = ([xA, yA], [xB, yB], barA) => {
 
 const moveX = ([xA, yA], [xB, yB], barA) => {
   let step = 0;
-  const move = () => {
+  let time;
+
+  const move = (timestamp) => {
+    if (time === undefined) time = timestamp;
+    const timeElapsed = timestamp - time;
+    step = ((xB - xA) / 250) * timeElapsed;
     if (Math.abs(step) < Math.abs(xB - xA)) {
-      step += (xB - xA) / (0.2 * 60);
       let y = (step / (xB - xA)) * (yB - yA) + yA;
       barA.setAttribute("transform", `translate(${xA + step}, ${y})`);
       window.requestAnimationFrame(move);
-    } else if (Math.abs(step) > Math.abs(xB - xA)) {
+    } else if (Math.abs(step) >= Math.abs(xB - xA)) {
       barA.setAttribute("transform", `translate(${xB}, ${yB})`);
     }
   };
